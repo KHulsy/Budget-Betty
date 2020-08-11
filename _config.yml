@@ -30,3 +30,5 @@ body {
 </style>
 </head>
 <body>
+
+theme: jekyll-theme-tactile
