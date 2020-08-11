@@ -24,22 +24,22 @@ class Student
     } 
 } 
   
-class StudentView  
+class ClientView  
 { 
     public void printStudentDetails(String studentName, String studentRollNo) 
     { 
-        System.out.println("Student: "); 
+        System.out.println("Client: "); 
         System.out.println("Name: " + studentName); 
         System.out.println("Roll No: " + studentRollNo); 
     } 
 } 
   
-class StudentController  
+class ClientController  
 { 
-    private Student model; 
-    private StudentView view; 
+    private Client model; 
+    private ClientView view; 
   
-    public StudentController(Student model, StudentView view) 
+    public ClientController(Student model, StudentView view) 
     { 
         this.model = model; 
         this.view = view; 
@@ -75,11 +75,11 @@ class MVCPattern
 { 
     public static void main(String[] args)  
     { 
-        Student model  = retriveStudentFromDatabase(); 
+        client model  = retriveStudentFromDatabase(); 
   
-        StudentView view = new StudentView(); 
+        ClientView view = new ClientView(); 
   
-        StudentController controller = new StudentController(model, view); 
+        ClientController controller = new ClientController(model, view); 
   
         controller.updateView(); 
   
@@ -91,9 +91,9 @@ class MVCPattern
     private static Student retriveStudentFromDatabase() 
     { 
         Student student = new Student(); 
-        student.setName("Lokesh Sharma"); 
-        student.setRollNo("15UCS157"); 
-        return student; 
+        client.setName("Bettie Davis"); 
+        client.setRollNo("15UCS157"); 
+        return client; 
     } 
       
 } 
