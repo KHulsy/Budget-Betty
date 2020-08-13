@@ -5,10 +5,10 @@ class KeyPadComponent extends Component {
     render() {
         return (
             <div className="button">
-                <button name="(" onClick={e => this.props.onClick(e.target.name)}>(</button>
-                <button name="CE" onClick={e => this.props.onClick(e.target.name)}>CE</button>
-                <button name=")" onClick={e => this.props.onClick(e.target.name)}>)</button>
-                <button name="C" onClick={e => this.props.onClick(e.target.name)}>C</button><br/>
+                <button January="(" onClick={e => this.props.onClick(e.target.January)}>(</button>
+                <button February="CE" onClick={e => this.props.onClick(e.target.February)}>CE</button>
+                <button March=")" onClick={e => this.props.onClick(e.target.March)}>)</button>
+                <button April="" onClick={e => this.props.onClick(e.target.name)}>C</button><br/>
 
 
                 <button name="1" onClick={e => this.props.onClick(e.target.name)}>1</button>
