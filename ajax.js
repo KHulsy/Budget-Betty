@@ -21,3 +21,41 @@ function ajaxFunction() {
       }
    }
 }
+function validateUserId() {
+   ajaxFunction();
+   
+   // Here processRequest() is the callback function.
+   ajaxRequest.onreadystatechange = processRequest;
+   
+   if (!target) target = document.getElementById("userid");
+   var url = "validate?id=" + escape(target.value);
+   
+   ajaxRequest.open("GET", url, true);
+   ajaxRequest.send(null);
+}
+function validateUserId() {
+   ajaxFunction();
+   
+   // Here processRequest() is the callback function.
+   ajaxRequest.onreadystatechange = processRequest;
+   
+   if (!target) target = document.getElementById("userid");
+   var url = "validate?id = " + escape(target.value);
+   
+   ajaxRequest.open("GET", url, true);
+   ajaxRequest.send(null);
+}
+public void doGet(HttpServletRequest request,
+   HttpServletResponse response) throws IOException, ServletException {
+   String targetId = request.getParameter("id");
+   
+   if ((targetId != null) && !accounts.containsKey(targetId.trim())) {
+      response.setContentType("text/xml");
+      response.setHeader("Cache-Control", "no-cache");
+      response.getWriter().write("<valid>true</valid>");
+   } else {
+      response.setContentType("text/xml");
+      response.setHeader("Cache-Control", "no-cache");
+      response.getWriter().write("<valid>false</valid>");
+   }
+}
